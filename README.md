@@ -150,9 +150,10 @@ data/
 - Auditability at every stage
 
 ## Notes
-- No ML training is used; heuristics are intentionally chosen
-- The system is designed to be extended with additional memory types
-- The demo focuses on correctness and safety, not UI
+- No ML training is used; heuristics are intentionally chosen.
+- The system is designed to be extended with additional memory types.
+- The demo focuses on correctness and safety, not UI.
+- The system is intentionally stateful. Memory persists across runs unless explicitly reset.
 
 ## Conclusion
 This project demonstrates how an AI agent can learn responsibly by remembering past human decisions, improving automation rates without sacrificing trust or control.
