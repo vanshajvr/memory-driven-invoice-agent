@@ -15,6 +15,8 @@ export class MemoryApply {
     const proposedCorrections: string[] = [];
     const reasoningNotes: string[] = [];
 
+    // Generate correction suggestions based on recalled memory.
+    // No automatic changes are applied at this stage.
     for (const memory of vendorMemories) {
       // Example: vendor-specific field normalization
       if (

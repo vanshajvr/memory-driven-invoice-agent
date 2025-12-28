@@ -15,6 +15,8 @@ export class Learner {
     this.store = store;
   }
 
+  // Converts a human-approved correction into reusable memory.
+  // Confidence increases on approval and decreases on rejection.
   async learnFromCorrection(correction: HumanCorrection) {
     const confidenceChange = correction.approved ? 0.1 : -0.2;
 

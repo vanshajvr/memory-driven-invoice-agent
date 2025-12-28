@@ -28,7 +28,7 @@ async function runDemo() {
 
   const learner = new Learner(store);
 
-  // -------- Invoice #1 --------
+  // First invoice: cold start with no prior memory
   const invoice1: InvoiceContext = {
     invoiceId: "INV-001",
     vendorName: "Supplier GmbH",
@@ -49,7 +49,7 @@ async function runDemo() {
     approved: true
   });
 
-  // -------- Invoice #2 --------
+  // Second invoice: same vendor, memory should now influence behavior
   const invoice2: InvoiceContext = {
     invoiceId: "INV-002",
     vendorName: "Supplier GmbH",

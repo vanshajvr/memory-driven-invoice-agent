@@ -6,9 +6,11 @@ export interface DecisionResult {
   reasoning: string;
 }
 
+// Decisions are intentionally conservative.
+// Low-confidence memory always requires human review.
 export class DecisionEngine {
   decide(applyResult: ApplyResult): DecisionResult {
-    // No suggestions → nothing to act on
+    
     if (applyResult.proposedCorrections.length === 0) {
       return {
         requiresHumanReview: false,
@@ -17,7 +19,6 @@ export class DecisionEngine {
       };
     }
 
-    // Suggestions exist → be cautious for now
     return {
       requiresHumanReview: true,
       confidenceScore: 0.4,

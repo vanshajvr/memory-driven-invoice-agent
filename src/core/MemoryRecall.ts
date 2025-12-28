@@ -7,6 +7,8 @@ export interface InvoiceContext {
   extractedFields: Record<string, any>;
 }
 
+// Responsible only for fetching relevant historical memory.
+// Does not apply rules or make decisions.
 export class MemoryRecall {
   private store: MemoryStore;
 
