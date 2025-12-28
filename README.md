@@ -108,6 +108,14 @@ This demonstrates **real learning across invoices**, not within a single executi
 ```bash
 npm install
 ```
+### Optional: Reset memory (cold start)
+
+To simulate a fresh system with no prior learning (useful for demos or onboarding a new vendor):
+
+```bash
+rm data/memory.db
+```
+
 ### Run demo
 ```bash
 npm run demo
